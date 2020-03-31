@@ -11,13 +11,15 @@
 let yandexInput = document.getElementsByName('text')[0];
 let searchWord = 'Гобой';
 let i = 0;
+let bottonYandex = document.getElementsByClassName('button__text')[0];
+
 
 let timerId = setInterval(()=>{
        yandexInput.value += searchWord[i];
         i++;
         if (i>=searchWord.length) {
             clearInterval(timerId);
-            }
+            bottonYandex.click();[0]}
     },500);
 
 
