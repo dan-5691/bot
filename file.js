@@ -17,7 +17,7 @@ let timerId = setInterval(()=>{
         i++;
         if (i>=searchWord.length) {
             clearInterval(timerId);
-            yandexInput.click();}
+            }
     },500);
 
 
