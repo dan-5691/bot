@@ -21,5 +21,3 @@ let timerId = setInterval(()=>{
             clearInterval(timerId);
             bottonYandex.click();[0]}
     },500);
-
-
