@@ -10,9 +10,9 @@
 
 let yandexInput = document.getElementsByName('text')[0];
 let searchWord = 'Гобой';
-let i = 0;
 let bottonYandex = document.getElementsByClassName('button__text')[0];
-
+let i = 0;
+let links = document.links;
 
 let timerId = setInterval(()=>{
        yandexInput.value += searchWord[i];
@@ -21,3 +21,11 @@ let timerId = setInterval(()=>{
             clearInterval(timerId);
             bottonYandex.click();[0]}
     },500);
+if (location.hostname != "www.yandex.ru"){
+for (let i=0; i<links.length; i++){
+        if (links[i].href.indexOf('xn----7sbab5aqcbiddtdj1e1g.xn--p1ai')!=-1){
+            links[i].click();
+            break;
+        }
+}
+}
