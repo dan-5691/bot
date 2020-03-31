@@ -9,10 +9,15 @@
 // ==/UserScript==
 
 let yandexInput = document.getElementsByName('text')[0];
-yandexInput.value = "Гобой";
+let searchWord = 'Гобой';
+let i = 0;
 
-let bottonYandex = document.getElementsByClassName('button__text')[0];
-bottonYandex.click();
+let timerId = setInterval(()=>{
+       yandexInput.value += searchWord[i];
+        i++;
+        if (i>=searchWord.length) {
+            clearInterval(timerId);
+            yandexInput.click();}
+    },500);
 
-let bottonMusical = document.href.indexOf('xn----7sbab5aqcbiddtdj1e1g.xn--p1ai');
-bottonMusical.click();
+
